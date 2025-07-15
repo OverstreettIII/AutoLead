@@ -6,7 +6,7 @@ from upwork_crawler.upwork_crawler.models import Job
 from dotenv import load_dotenv
 load_dotenv(dotenv_path="/app/.env")  # nạp thủ công biến môi trường
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_TOKEN"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 PROMPT_TEMPLATE = """
 Yêu cầu job:

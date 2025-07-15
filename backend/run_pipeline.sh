@@ -12,8 +12,8 @@ else
     echo "❌ .env not found!"
 fi
 
-# In ra token length để debug
-echo "🔑 OPENAI_API_TOKEN length (from shell): ${#OPENAI_API_TOKEN}"
+# In ra KEY length để debug
+echo "🔑 OPENAI_API_KEY length (from shell): ${#OPENAI_API_KEY}"
 
 echo "🚀 Starting: python manage.py run_pipeline"
 

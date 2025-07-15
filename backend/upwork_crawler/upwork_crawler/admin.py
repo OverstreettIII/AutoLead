@@ -31,7 +31,7 @@ class JobAdmin(admin.ModelAdmin):
                 self.message_user(request, f"Email đã được gửi lại cho job: {job.title}")
             except Exception as e:
                 self.message_user(request, f"Lỗi khi gửi email cho job: {job.title} - {e}", level="error")
-    send_email_again.short_description = "Gửi lại email"
+    send_email_again.short_description = "Send Email Again"
 
     def evaluate_gpt(self, request, queryset):
         for job in queryset:
@@ -43,4 +43,4 @@ class JobAdmin(admin.ModelAdmin):
                 self.message_user(request, f"Đánh giá lại GPT cho job: {job.title} thành công.")
             except Exception as e:
                 self.message_user(request, f"Lỗi khi đánh giá lại GPT cho job: {job.title} - {e}", level="error")
-    evaluate_gpt.short_description = "Đánh giá lại GPT"
+    evaluate_gpt.short_description = "GPT Reevaluate"
